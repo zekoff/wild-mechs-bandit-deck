@@ -1,0 +1,17 @@
+{
+    "cards": [
+        "1 to Cactus, 2 to Graveyard, Gold to Prairie",
+        "1 to Graveyard, 1 to Tumbleweed, 1 to Prairie",
+        "1 to Cactus, 1 to Prairie, Gold to Cactus",
+        "1 to Cactus, 1 to Tumbleweed, Gold to Prairie",
+        "1 to Cactus, 1 to Graveyard, Gold to Cactus",
+        "1 to Graveyard, 1 to Prairie, Gold to Mountain",
+        "1 to Prairie, 1 to Cactus, Gold to Cactus",
+        "2 to Graveyard, 1 to Tumbleweed, Gold to Tumbleweed",
+        "1 to Cactus, Gold to Tumbleweed",
+        "1 to Graveyard, 1 to Prairie",
+        "1 to Tumbleweed, 1 to Cactus, Gold to Prairie",
+        "1 to Prairie, 1 to Cactus",
+        "1 to Tumbleweed, Gold to Tumbleweed"
+    ]
+}
