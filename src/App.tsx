@@ -4,16 +4,25 @@ import './App.css'
 import banditDeck from './assets/bandit_deck.json'
 import { Box, Card, CardContent, Container, Typography } from '@mui/material'
 
+function shuffleArray(array: string[][]) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function App() {
-  const [cardIndex, setCardIndex] = useState(0)
-  const [currentCard, setCurrentCard] = useState(banditDeck.cards[cardIndex]);
+  const [cardIndex, setCardIndex] = useState(0);
+  const cards = shuffleArray(banditDeck.list);
+  const [currentCard, setCurrentCard] = useState(cards[cardIndex]);
   const cycleCard = () => {
     const nextCardIndex = cardIndex + 1;
     if (nextCardIndex < banditDeck.cards.length) {
       setCardIndex(nextCardIndex);
-      setCurrentCard(banditDeck.cards[nextCardIndex]);
+      setCurrentCard(cards[nextCardIndex]);
     } else {
-      setCurrentCard("No more cards");
+      setCurrentCard(["No more cards"]);
     }
   }
   const getCardsRemaining = () => {
@@ -24,11 +33,18 @@ function App() {
     <Container>
       <Box component="img"
         src={wildMechsLogo}
-        sx={{width:233}} />
+        sx={{ width: 233 }} />
       <Typography variant="h2">Bandit Deck</Typography>
       <Typography variant="h3">Cards Remaining: {getCardsRemaining()}</Typography>
       <Card>
-        <CardContent><Typography variant="body1">{currentCard}</Typography></CardContent>
+        <CardContent>
+          {currentCard.map(
+            (element, index) => <Typography key={index} variant="body1">{element}</Typography>
+          )}
+          {/* {currentCard.forEach(
+          (element, index)=><Typography key={index} variant="body1">{element}</Typography>
+        )} */}
+        </CardContent>
         <button disabled={!getCardsRemaining()} onClick={cycleCard}>Draw Card</button>
       </Card>
     </Container>
