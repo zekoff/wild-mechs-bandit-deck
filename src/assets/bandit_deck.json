@@ -30,18 +30,18 @@
         ["1 to Tumbleweed", "Gold to Tumbleweed"]
     ],
     "table": [
-        {"cactus": 1, "prairie": 1, "tumbleweed": 0, "graveyard": 2, "gold": "prairie"},
+        {"cactus": 1, "prairie": 0, "tumbleweed": 0, "graveyard": 2, "gold": "prairie"},
         {"cactus": 0, "prairie": 1, "tumbleweed": 1, "graveyard": 1, "gold": null},
         {"cactus": 1, "prairie": 1, "tumbleweed": 0, "graveyard": 0, "gold": "cactus"},
         {"cactus": 1, "prairie": 0, "tumbleweed": 1, "graveyard": 0, "gold": "prairie"},
         {"cactus": 1, "prairie": 0, "tumbleweed": 0, "graveyard": 1, "gold": "cactus"},
-        {"cactus": 0, "prairie": 1, "tumbleweed": 0, "graveyard": 1, "gold": "mountain"},
-        {"cactus": 1, "prairie": 1, "tumbleweed": 0, "graveyard": 0, "gold": "cactus"},
+        {"cactus": 0, "prairie": 0, "tumbleweed": 0, "graveyard": 2, "gold": "mountain"},
+        {"cactus": 1, "prairie": 1, "tumbleweed": 1, "graveyard": 0, "gold": "cactus"},
         {"cactus": 0, "prairie": 0, "tumbleweed": 1, "graveyard": 2, "gold": "tumbleweed"},
         {"cactus": 1, "prairie": 0, "tumbleweed": 0, "graveyard": 0, "gold": "tumbleweed"},
         {"cactus": 0, "prairie": 1, "tumbleweed": 0, "graveyard": 1, "gold": null},
-        {"cactus": 1, "prairie": 1, "tumbleweed": 1, "graveyard": 0, "gold": "prairie"},
-        {"cactus": 1, "prairie": 1, "tumbleweed": 0, "graveyard": 0, "gold": null},
-        {"cactus": 0, "prairie": 0, "tumbleweed": 1, "graveyard": 0, "gold": "tumbleweed"}
+        {"cactus": 1, "prairie": 0, "tumbleweed": 1, "graveyard": 1, "gold": "prairie"},
+        {"cactus": 1, "prairie": 1, "tumbleweed": 0, "graveyard": 1, "gold": null},
+        {"cactus": 1, "prairie": 0, "tumbleweed": 1, "graveyard": 0, "gold": "tumbleweed"}
     ]
 }

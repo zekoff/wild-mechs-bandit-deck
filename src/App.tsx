@@ -12,6 +12,21 @@ function shuffleArray(array: string[][]) {
   return array;
 }
 
+function sumTableValues(deck: { table: { [key: string]: number|string|null }[] }) {
+  const sums: { [key: string]: number } = {};
+  deck.table.forEach(row => {
+    for (const key in row) {
+      if (row.hasOwnProperty(key) && typeof row[key] === 'number') {
+        if (!sums[key]) {
+          sums[key] = 0;
+        }
+        sums[key] += row[key] as number;
+      }
+    }
+  });
+  return sums;
+}
+
 function App() {
   const [cardIndex, setCardIndex] = useState(0);
   const cards = shuffleArray(banditDeck.list);
@@ -41,12 +56,18 @@ function App() {
           {currentCard.map(
             (element, index) => <Typography key={index} variant="body1">{element}</Typography>
           )}
-          {/* {currentCard.forEach(
-          (element, index)=><Typography key={index} variant="body1">{element}</Typography>
-        )} */}
         </CardContent>
         <button disabled={!getCardsRemaining()} onClick={cycleCard}>Draw Card</button>
       </Card>
+      <Box>
+        <Typography variant="h4">Table Sums:</Typography>
+        {Object.entries(sumTableValues(banditDeck)).map(([key, value]) => (
+          <Typography key={key} variant="body1">{`${key}: ${value}`}</Typography>
+        ))}
+        <Typography variant="h5">
+          Total Sum: {Object.values(sumTableValues(banditDeck)).reduce((acc, value) => acc + value, 0)}
+        </Typography>
+      </Box>
     </Container>
   )
 }
