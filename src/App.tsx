@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import wildMechsLogo from '/wild_mechs_text.jpeg'
 import './App.css'
 import banditDeck from './assets/bandit_deck.json'
@@ -29,19 +29,25 @@ function sumTableValues(deck: { table: { [key: string]: number | string | null }
 
 function App() {
   const [cardIndex, setCardIndex] = useState(0);
-  const cards = shuffleArray(banditDeck.table);
-  const [currentCard, setCurrentCard] = useState(cards[cardIndex]);
+  const [cards, setCards] = useState<any[]>([]);
+  const [currentCard, setCurrentCard] = useState(null);
+  useEffect(() => {
+    setCards(shuffleArray(banditDeck.table));
+  }, []);
+  useEffect(() => {
+    if (cards.length > 0) setCurrentCard(cards[cardIndex]);
+  }, [cardIndex, cards]);
   const cycleCard = () => {
     const nextCardIndex = cardIndex + 1;
+    console.log(nextCardIndex);
     if (nextCardIndex < cards.length) {
       setCardIndex(nextCardIndex);
       setCurrentCard(cards[nextCardIndex]);
-    } else {
-      setCurrentCard(["No more cards"]);
+      console.log(cards[nextCardIndex]);
     }
   }
   const getCardsRemaining = () => {
-    return banditDeck.cards.length - 1 - cardIndex;
+    return banditDeck.table.length - 1 - cardIndex;
   }
 
   return (
@@ -53,10 +59,11 @@ function App() {
       <Typography variant="h3">Cards Remaining: {getCardsRemaining()}</Typography>
       <Card>
         <CardContent>
-          {Object.entries(currentCard).map(
+          {currentCard && Object.entries(currentCard).map(
             ([key, value]) => {
               if (!value) return null;
               if (key === 'Gold') return <Typography key={key} variant="body1">Gold to {value as string}</Typography>;
+              if (key === 'Extra') return <Typography key={key} variant="body1">Event: {value as string}</Typography>;
               return <Typography key={key} variant="body1">{value as string} to {key}</Typography>;
             }
           )}

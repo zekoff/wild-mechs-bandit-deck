@@ -30,18 +30,19 @@
         ["1 to Tumbleweed", "Gold to Tumbleweed"]
     ],
     "table": [
-        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 2, "Gold": "Prairie"},
-        {"Cactus": 0, "Prairie": 1, "Tumbleweed": 1, "Graveyard": 1, "Gold": null},
-        {"Cactus": 1, "Prairie": 1, "Tumbleweed": 0, "Graveyard": 0, "Gold": "Cactus"},
-        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 0, "Gold": "Prairie"},
-        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 1, "Gold": "Cactus"},
-        {"Cactus": 0, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 2, "Gold": "Mountain"},
-        {"Cactus": 1, "Prairie": 1, "Tumbleweed": 1, "Graveyard": 0, "Gold": "Cactus"},
-        {"Cactus": 0, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 2, "Gold": "Tumbleweed"},
-        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 0, "Gold": "Tumbleweed"},
-        {"Cactus": 0, "Prairie": 1, "Tumbleweed": 0, "Graveyard": 1, "Gold": null},
-        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 1, "Gold": "Prairie"},
-        {"Cactus": 1, "Prairie": 1, "Tumbleweed": 0, "Graveyard": 1, "Gold": null},
-        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 0, "Gold": "Tumbleweed"}
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 2, "Gold": "Prairie", "Extra": "If you choose, move one mech to any location. (That triggers a shootout if you move to a location with bandits.)"},
+        {"Cactus": 0, "Prairie": 1, "Tumbleweed": 1, "Graveyard": 1, "Gold": null, "Extra": "Roll the die and remove that total number of bandits from locations you choose."},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 0, "Gold": "Cactus", "Extra": "Remove one bandit camp from any location."},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 0, "Gold": "Prairie", "Extra": "Draw a second bandit card this turn."},
+        {"Cactus": 0, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 0, "Gold": "Cactus", "Extra": "No bandits this turn."},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 2, "Gold": "Mountain", "Extra": null},
+        {"Cactus": 1, "Prairie": 1, "Tumbleweed": 1, "Graveyard": 0, "Gold": "Cactus", "Extra": null},
+        {"Cactus": 0, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 2, "Gold": "Tumbleweed", "Extra": null},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 1, "Gold": "Tumbleweed", "Extra": null},
+        {"Cactus": 0, "Prairie": 1, "Tumbleweed": 0, "Graveyard": 1, "Gold": null, "Extra": null},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 2, "Gold": null, "Extra": null},
+        {"Cactus": 1, "Prairie": 1, "Tumbleweed": 0, "Graveyard": 1, "Gold": null, "Extra": null},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 1, "Graveyard": 0, "Gold": "Tumbleweed", "Extra": null},
+        {"Cactus": 1, "Prairie": 0, "Tumbleweed": 0, "Graveyard": 2, "Gold": "Prairie", "Extra": null}
     ]
 }
