@@ -30,19 +30,19 @@
         ["1 to Tumbleweed", "Gold to Tumbleweed"]
     ],
     "table": [
-        {"Rank": "A", "Prairie": 0, "Tumbleweed": 0, "Cactus": 0, "Graveyard": 0, "Gold": null, "Event": "No bandits this turn."},
-        {"Rank": "2", "Prairie": 0, "Tumbleweed": 0, "Cactus": 1, "Graveyard": 2, "Gold": "Mountain", "Event": null},
-        {"Rank": "3", "Prairie": 1, "Tumbleweed": 1, "Cactus": 1, "Graveyard": 0, "Gold": "Cactus", "Event": null},
-        {"Rank": "4", "Prairie": 0, "Tumbleweed": 1, "Cactus": 0, "Graveyard": 2, "Gold": "Tumbleweed", "Event": null},
-        {"Rank": "5", "Prairie": 0, "Tumbleweed": 0, "Cactus": 1, "Graveyard": 1, "Gold": "Tumbleweed", "Event": null},
-        {"Rank": "6", "Prairie": 1, "Tumbleweed": 0, "Cactus": 0, "Graveyard": 1, "Gold": "Cactus", "Event": null},
-        {"Rank": "7", "Prairie": 0, "Tumbleweed": 1, "Cactus": 1, "Graveyard": 2, "Gold": "Mountain", "Event": null},
-        {"Rank": "8", "Prairie": 1, "Tumbleweed": 0, "Cactus": 1, "Graveyard": 1, "Gold": "Cactus", "Event": null},
-        {"Rank": "9", "Prairie": 0, "Tumbleweed": 1, "Cactus": 1, "Graveyard": 0, "Gold": "Tumbleweed", "Event": null},
-        {"Rank": "10", "Prairie": 0, "Tumbleweed": 0, "Cactus": 1, "Graveyard": 2, "Gold": "Prairie", "Event": null},
-        {"Rank": "J", "Prairie": 0, "Tumbleweed": 0, "Cactus": 1, "Graveyard": 2, "Gold": "Prairie", "Event": "If you choose, move one mech to any location. (That triggers a shootout if you move to a location with bandits.)"},
-        {"Rank": "Q", "Prairie": 1, "Tumbleweed": 1, "Cactus": 0, "Graveyard": 1, "Gold": "Prairie", "Event": "Roll the die and remove that total number of bandits from locations you choose."},
-        {"Rank": "K", "Prairie": 0, "Tumbleweed": 1, "Cactus": 1, "Graveyard": 0, "Gold": "Cactus", "Event": "Remove one bandit camp from any location."},
-        {"Rank": "Joker", "Prairie": 0, "Tumbleweed": 0, "Cactus": 1, "Graveyard": 0, "Gold": null, "Event": "Draw a second bandit card this turn."}
+        {"Rank": "A", "Desert": 0, "Badlands": 0, "Plains": 0, "Ghost Town": 0, "Gold": null, "Event": "No bandits this turn."},
+        {"Rank": "2", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 2, "Gold": "Mountain", "Event": null},
+        {"Rank": "3", "Desert": 1, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": "Plains", "Event": null},
+        {"Rank": "4", "Desert": 0, "Badlands": 1, "Plains": 0, "Ghost Town": 2, "Gold": "Tumbleweed", "Event": null},
+        {"Rank": "5", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 1, "Gold": "Tumbleweed", "Event": null},
+        {"Rank": "6", "Desert": 1, "Badlands": 0, "Plains": 0, "Ghost Town": 1, "Gold": "Plains", "Event": null},
+        {"Rank": "7", "Desert": 0, "Badlands": 1, "Plains": 1, "Ghost Town": 2, "Gold": "Mountain", "Event": null},
+        {"Rank": "8", "Desert": 1, "Badlands": 0, "Plains": 1, "Ghost Town": 1, "Gold": "Plains", "Event": null},
+        {"Rank": "9", "Desert": 0, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": "Tumbleweed", "Event": null},
+        {"Rank": "10", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 2, "Gold": "Desert", "Event": null},
+        {"Rank": "J", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 2, "Gold": "Desert", "Event": "If you choose, move one mech to any location. (That triggers a shootout if you move to a location with bandits.)"},
+        {"Rank": "Q", "Desert": 1, "Badlands": 1, "Plains": 0, "Ghost Town": 1, "Gold": "Desert", "Event": "Roll the die and remove that total number of bandits from locations you choose."},
+        {"Rank": "K", "Desert": 0, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": "Plains", "Event": "Remove one bandit camp from any location."},
+        {"Rank": "Joker", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 0, "Gold": null, "Event": "Draw a second bandit card this turn."}
     ]
 }
