@@ -57,6 +57,7 @@ function App() {
         sx={{ width: 233 }} />
       <Typography variant="h2">Bandit Deck</Typography>
       <Typography variant="h3">Cards Remaining: {getCardsRemaining()}</Typography>
+      <Typography variant="body1">Reminder: Desert=Prairie, Badlands=Tumbleweed, Plains=Cactus, Ghost Town=Graveyard</Typography>
       <Card>
         <CardContent>
           {currentCard && Object.entries(currentCard).map(
