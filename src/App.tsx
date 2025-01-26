@@ -1,8 +1,19 @@
 import { useEffect, useState } from 'react'
 import wildMechsLogo from '/wild_mechs_text.jpeg'
 import './App.css'
-import banditDeck from './assets/bandit_deck.json'
-import { Box, Card, CardContent, Container, Typography } from '@mui/material'
+import banditDeckData from './assets/bandit_deck.json'
+import { Box, Card, CardContent, Container, Switch, Typography } from '@mui/material'
+
+const banditDeck = banditDeckData as BanditDeckType;
+
+interface CardType {
+  [key: string]: number | string | null;
+}
+
+interface BanditDeckType {
+  table: CardType[];
+  locationPairs: { [key: string]: string };
+}
 
 function shuffleArray(array: {}[]) {
   for (let i = array.length - 1; i > 0; i--) {
@@ -29,8 +40,9 @@ function sumTableValues(deck: { table: { [key: string]: number | string | null }
 
 function App() {
   const [cardIndex, setCardIndex] = useState(0);
-  const [cards, setCards] = useState<any[]>([]);
-  const [currentCard, setCurrentCard] = useState(null);
+  const [cards, setCards] = useState<CardType[]>([]);
+  const [currentCard, setCurrentCard] = useState<CardType | null>(null);
+  const [v1Names, setV1Names] = useState(true);
   useEffect(() => {
     setCards(shuffleArray(banditDeck.table));
   }, []);
@@ -57,15 +69,20 @@ function App() {
         sx={{ width: 233 }} />
       <Typography variant="h2">Bandit Deck</Typography>
       <Typography variant="h3">Cards Remaining: {getCardsRemaining()}</Typography>
-      <Typography variant="body1">Reminder: Desert=Prairie, Badlands=Tumbleweed, Plains=Cactus, Ghost Town=Graveyard</Typography>
+      <Box display="flex" alignItems="center">
+        <Typography variant="body1">v1 Card Names</Typography>
+        <Switch checked={v1Names} onChange={() => setV1Names(!v1Names)} />
+      </Box>
       <Card>
         <CardContent>
           {currentCard && Object.entries(currentCard).map(
             ([key, value]) => {
               if (!value) return null;
-              if (key === 'Gold') return <Typography key={key} variant="body1">Gold to {value as string}</Typography>;
-              if (key === 'Extra') return <Typography key={key} variant="body1">Event: {value as string}</Typography>;
-              return <Typography key={key} variant="body1">{value as string} to {key}</Typography>;
+              const displayName = v1Names ? banditDeck.locationPairs[key] : key;
+              if (key === 'Rank') return <Typography key={key} variant="h6">Rank: {value as string}</Typography>;
+              if (key === 'Gold') return <Typography key={key} variant="body1">Gold to {v1Names && banditDeck.locationPairs[value] ? banditDeck.locationPairs[value] : value}</Typography>;
+              if (key === 'Event') return <Typography key={key} variant="body1">Event: {value as string}</Typography>;
+              return <Typography key={key} variant="body1">{value as string} to {displayName}</Typography>;
             }
           )}
         </CardContent>
