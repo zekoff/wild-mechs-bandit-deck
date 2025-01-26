@@ -30,7 +30,7 @@
         ["1 to Tumbleweed", "Gold to Tumbleweed"]
     ],
     "table": [
-        {"Rank": "Ace", "Desert": 0, "Badlands": 0, "Plains": 0, "Ghost Town": 0, "Gold": null, "Event": "No bandits this turn."},
+        {"Rank": "Joker", "Desert": 0, "Badlands": 0, "Plains": 0, "Ghost Town": 0, "Gold": null, "Event": "No bandits this turn."},
         {"Rank": "2", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 2, "Gold": "Mountain", "Event": null},
         {"Rank": "3", "Desert": 1, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": "Desert", "Event": null},
         {"Rank": "4", "Desert": 0, "Badlands": 1, "Plains": 0, "Ghost Town": 2, "Gold": "Badlands", "Event": null},
@@ -43,7 +43,7 @@
         {"Rank": "Jack", "Desert": 0, "Badlands": 0, "Plains": 1, "Ghost Town": 2, "Gold": "Plains", "Event": "If you choose, move one mech to any location."},
         {"Rank": "Queen", "Desert": 0, "Badlands": 1, "Plains": 0, "Ghost Town": 1, "Gold": "Badlands", "Event": "Roll the die. Remove that total number of bandits from any combination of locations."},
         {"Rank": "King", "Desert": 0, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": "Plains", "Event": "Remove one bandit camp from any location."},
-        {"Rank": "Joker", "Desert": 0, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": null, "Event": "Draw a second bandit card this turn."}
+        {"Rank": "Ace", "Desert": 0, "Badlands": 1, "Plains": 1, "Ghost Town": 0, "Gold": null, "Event": "Draw a second bandit card this turn."}
     ],
     "locationPairs": {
         "Desert": "Plains",
